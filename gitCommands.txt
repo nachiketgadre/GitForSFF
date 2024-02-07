@@ -1,0 +1,83 @@
+-- List of all the git commands you learned till 7th feb 2024 --
+
+01. git init >> initiate the git repository.
+
+02. git status >> show the file's status in the current directory/workspace.
+
+03. git add >> add files to the staging area.
+    git add fileName.txt >> single file added to the staging area.
+    OR
+    git add . >> all modified files added to the staging area.
+
+04. git commit >> commit your changes to the local repo.
+    git commit -m "your msg" >> m stands for message.
+    git commit -am "your msg" >> shortcut to add and commit, a stands for add.
+
+05. git log >> view the commit history.
+    git log --oneline >> just list commit id and message.
+    git log --graph -- oneline >> the graphical representation of the git log 
+    in one line for each commit.
+
+06. git rm >> to remove the files from the staging area.
+    git rm fileName.txt 
+
+07. git reset >> reset the mentioned commit (i.e. reset it to the state before the mentioned commit id).
+    git reset commit_id
+
+08. git revert >> revert back to the mentioned commit id while keeping the previous commits.
+    git revert commit_id
+
+09. git rebase >> combine the multiple commits into a single commit.
+    git rebase -i HEAD~5
+    squash >> it will merge into the previous commit.
+    fixup >> it will maintain the commit.
+
+    git rebase branch_name >> combine the another branch into single branch.
+
+10. git branch >> list all the branches.
+
+11. git branch branch_name >> create a new branch.
+    OR
+    git checkout -b branch_name >> create new branch and checkout to the same.
+
+12. git switch branch_name >> switch to branch.
+    OR
+    git checkout branch_name >> switch to branch.
+
+13. git branch -d branch_name >> to delete the branch.
+
+14. git merge >> combine the changes from the another branch.
+    git merge branch_name >> branch name will get merged with the active branch.
+
+15. git diff >> show thw difference between the files or branches.
+    git diff fileName.txt
+    git diff branch1 branch2
+    git diff commit_id1 commit_id2
+
+16. git stash >> temperorily remove the changes from workspace or current directory for future use.
+
+17. git stash list >> list of all stash.
+
+18. git stash apply/pop >> previous stash will be recovered.
+    git stash apply/pop 3 >> mentioned index stash will be recovered.(we can get the index number from the 17th cmd).
+
+19. git stash drop >> previous stash will be dropped.
+    git stash drop 2 >> mentioned index stash will be dropped.
+
+    git stash clear >> all stash list will be cleared.
+
+-- GIT HUB COMMANDS --  
+
+01. git clone REMOTE_REPO_URL >> download the repo to a local system.
+
+02. git remote add origin REMOTE_REPO_URL >> to make the connection between the local and remote repo.
+
+03. git push -u origin main >> push the changes from the local repo to the remote repo (use this only for first time).
+    git push >> shortcut.
+
+04. git pull origin main >> download the changes from remote repo to local repo (use this only for first time).
+    git pull >> shortcut
+
+05. git fetch >> download the changes into local repo but not in workspace/current working directory.
+
+06. git push --set-upstream origin new_branch >> to set the upstream to the newly created branch.
